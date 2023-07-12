@@ -3,7 +3,7 @@
   <div class="row flex flex-center">
     <div class="col-6 form-widget">
       
-      <img src="/eco_ops_giraffe_graphic2023-07-12-.avif" class="hero">
+      <img src="https://raw.githubusercontent.com/biomassives/ecoops-supa-magic/main/src/assets/eco_ops_giraffe_graphic2023-07-12-.avif" class="hero">
       <h1 class="header">Eco Ops App</h1>
       <p class="description">Sign in to update your profile via magic link with your email below</p>
       <div>

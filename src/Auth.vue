@@ -1,12 +1,70 @@
 
 <template>
   <div class="row flex flex-center">
+
     <div class="col-6 form-widget">
-      
-      <img src="https://raw.githubusercontent.com/biomassives/ecoops-supa-magic/main/src/assets/eco_ops_giraffe_graphic2023-07-12-.avif" class="hero">
+      <p class="description">
       <h1 class="header">Eco Ops App</h1>
-      <p class="description">Sign in to update your profile via magic link with your email below</p>
-      <div>
+      Sign in to update your profile via magic link with your email below
+      <img src="https://raw.githubusercontent.com/biomassives/ecoops-supa-magic/main/src/assets/eco_ops_giraffe_graphic2023-07-12-.avif" class="hero">
+      </p>  
+    </div>
+   
+    <div class="col-6 form-widget"  style="margin-top: 5rem">
+      <div row>
+
+      <b-card>
+        <template #icon>
+          <DocumentationIcon />
+        </template>
+        <template #heading></template>
+        <b>Check ins</b><BR />
+        Track activities that generate biodiversity credits & NFT tokens.
+      </b-card>
+
+      <p></p>
+
+      <WelcomeItem>
+        <template #icon>
+          <CommunityIcon />
+        </template>
+        <template #heading></template>
+
+        <b>Verification</b><BR />
+        Community verifiers are experts in techniques for their regional
+        context.
+      </WelcomeItem>
+
+  </div>
+<div row>
+   
+ 
+
+      <WelcomeItem>
+        <template #icon>
+          <EcosystemIcon />
+        </template>
+        <template #heading></template>
+        <b>Technique</b><BR />
+        Biodiversity credits empower those effected by pollution & climate to restore
+        ecosystems.
+      </WelcomeItem>
+
+      <p></p>
+      <WelcomeItem>
+        <template #icon>
+          <SupportIcon />
+        </template>
+        <template #heading></template>
+        <b>Transparency</b><BR />
+        Participants provide checkin to show steps taken toward
+        achieving project milestones.
+      </WelcomeItem>
+
+
+</div>
+
+  <div>
         <input
           class="inputField"
           type="email"
@@ -28,8 +86,10 @@
           <span>{{ loading ? "Loading..." : "Send Magic Link" }}</span>
         </button>
       </div>
-    </div>
-  </div>
+</div>
+
+      
+</div>
 </template>
 
 <script lang="ts">

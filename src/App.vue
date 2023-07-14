@@ -11,6 +11,7 @@
 import { defineComponent, onMounted, ref } from "vue";
 import Auth from "./Auth.vue";
 import Account from "./Account.vue";
+import {Tabs, Tab} from 'vue3-tabs-component';
 import { supabase } from "./supabaseClient";
 
 export default defineComponent({

@@ -4,8 +4,9 @@
 
     <div class="headarea">
       <p class="description">
+        <br/><br/><br/>
       <h1 class="header">Eco Ops App</h1>
-      Sign in to update your profile via magic link with your email below
+      Sign in to update your profile via <BR/> magic link with your email below
       <BR />
 
       <img src="https://raw.githubusercontent.com/biomassives/ecoops-supa-magic/main/src/assets/eco_ops_giraffe_graphic2023-07-12-.avif" class="hero">

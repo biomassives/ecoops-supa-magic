@@ -19,7 +19,7 @@
     </div>
     <div>
       <label htmlFor="group">Group</label>
-      <input id="group" type="group" v-model="group" />
+      <input id="group" type="ecogroup" v-model="group" />
     </div>
     <div>
       <label htmlFor="project">Project</label>
@@ -69,7 +69,7 @@ export default defineComponent({
     const loading = ref(false);
     const username = ref("");
     const website = ref("");
-    const group = ref("");
+    const ecogroup = ref("");
     const project = ref("");
     const avatar_url = ref("");
 
@@ -95,7 +95,7 @@ export default defineComponent({
           id: user?.id,
           username : username.value,
           website: website.value,         
-          group: group.value,
+          ecogroup: ecogroup.value,
           project: project.value,
           avatar_url: (avatar_url.value || avatar_url),
           updated_at: new Date()
@@ -120,7 +120,7 @@ export default defineComponent({
 
         let { data, error, status } = await supabase
           .from("profiles")
-          .select(`username, website, project, group, avatar_url`)
+          .select(`username, website, project, ecogroup, avatar_url`)
           .eq("id", user.id)
           .single();
 
@@ -131,7 +131,7 @@ export default defineComponent({
         if (data) {
           username.value = data.username;
           website.value = data.website;
-          group.value = data.group;
+          ecogroup.value = data.ecogroup;
           project.value = data.project;
           avatar_url.value = data.avatar_url;
         }
@@ -150,7 +150,7 @@ export default defineComponent({
       loading,
       username,
       website,
-      group,
+      ecogroup,
       project,
       avatar_url,
       updateProfile,

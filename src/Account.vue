@@ -1,33 +1,11 @@
-
 <template>
-
-<div>
-    <tabs :options="{ useUrlFragment: false }" @clicked="tabClicked" @changed="tabChanged" nav-item-class="nav-item">
-        <tab name="First tab">
-            This is the content of the first tab
-        </tab>
-        <tab name="Second tab">
-            This is the content of the second tab
-        </tab>
-        <tab name="Disabled tab" :is-disabled="true">
-            This content will be unavailable while :is-disabled prop set to true
-        </tab>
-        <tab id="oh-hi-mark" name="Custom fragment">
-            The fragment that is appended to the url can be customized
-        </tab>
-        <tab prefix="<span class='glyphicon glyphicon-star'></span> " 
-             name="Prefix and suffix" 
-             suffix=" <span class='badge'>4</span>">
-            A prefix and a suffix can be added
-        </tab>
-    </tabs>
-</div>
 
 
   <div class="form-widget">
-    <h1 class="header">Supabase + Vue.js: Account</h1>
-    <avatar :url="avatar_url" @onUpload="handleImageUpload" />
-    <div>
+  <h1 class="header">Eco Ops Profile</h1>
+  <div>  <avatar :url="avatar_url" @onUpload="handleImageUpload" />  </div>
+  <p></p>
+  <div>
       <label htmlFor="email">Email</label>
       <input id="email" type="text" :value="session.user.email" disabled />
     </div>
@@ -66,13 +44,18 @@
   </div>
 </template>
 
+
+
+
+
+
+
 <script lang="ts">
+
 import { defineComponent, nextTick, ref } from "vue";
 import Avatar from "./Avatar.vue";
 import { supabase } from "./supabaseClient";
 
-
-import {Tabs, Tab} from 'vue3-tabs-component';
 
 
 
@@ -178,5 +161,6 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-</style>
+
+
+

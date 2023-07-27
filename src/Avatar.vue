@@ -5,16 +5,16 @@
     class="avatar image"
     style="height: 150px, width: 150px"
   />
-  <div style="width: 150px">
-    <input
+  <div>
+    <button
       style="visibility: hidden; position: absolute"
       type="file"
       id="single"
       accept="image/*"
       @change="uploadAvatar"
-      :disabled="uploading"
-    />
-    <label class="button primary block" htmlFor="single">
+      :disabled="uploading">
+  </button>
+  <label class="button primary block" htmlFor="single">
       <span>{{ uploading ? "UpLoading..." : "Upload" }}</span>
     </label>
   </div>

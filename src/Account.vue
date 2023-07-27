@@ -18,8 +18,8 @@
       <input id="website" type="website" v-model="website" />
     </div>
     <div>
-      <label htmlFor="group">Group</label>
-      <input id="group" type="ecogroup" v-model="group" />
+      <label htmlFor="ecogroup">Group</label>
+      <input id="ecogroup" type="ecogroup" v-model="group" />
     </div>
     <div>
       <label htmlFor="project">Project</label>

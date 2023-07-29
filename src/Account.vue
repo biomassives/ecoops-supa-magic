@@ -1,7 +1,7 @@
 
 <template>
   <div class="form-widget">
-    <h1 class="header">Supabase + Vue.js: Account</h1>
+    <h1 class="header">Eco Ops App Profile</h1>
     <avatar :url="avatar_url" @onUpload="handleImageUpload" />
     <div>
       <label htmlFor="email">Email</label>

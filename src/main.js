@@ -1,5 +1,12 @@
 import { createApp } from 'vue'
 import './style.css'
-import App from './App.vue'
+//import Tabs from '../src/main';
+import App from './App.vue';
 
-createApp(App).mount('#app')
+
+
+//import { Tabs } from './Custom.vue'
+
+createApp(App)
+//.component('tabs', Tabs)
+.mount('#app')

@@ -1,6 +1,8 @@
-
 <template>
+
+
   <div class="form-widget">
+
 
     
     <h1 class="header">Eco Ops App</h1>
@@ -8,6 +10,12 @@
 
     <avatar :url="avatar_url" @onUpload="handleImageUpload" />
     <div>
+
+  <h1 class="header">Eco Ops Profile</h1>
+  <div>  <avatar :url="avatar_url" @onUpload="handleImageUpload" />  </div>
+  <p></p>
+  <div>
+
       <label htmlFor="email">Email</label>
       <input id="email" type="text" :value="session.user.email" disabled />
     </div>
@@ -20,8 +28,8 @@
       <input id="website" type="website" v-model="website" />
     </div>
     <div>
-      <label htmlFor="group">Group</label>
-      <input id="group" type="group" v-model="group" />
+      <label htmlFor="ecogroup">Group</label>
+      <input id="ecogroup" type="ecogroup" v-model="group" />
     </div>
     <div>
       <label htmlFor="project">Project</label>
@@ -60,10 +68,20 @@
   </div>
 </template>
 
+
+
+
+
+
+
 <script lang="ts">
+
 import { defineComponent, nextTick, ref } from "vue";
 import Avatar from "./Avatar.vue";
 import { supabase } from "./supabaseClient";
+
+
+
 
 export default defineComponent({
   name: "Account",
@@ -77,6 +95,7 @@ export default defineComponent({
     const website = ref("");
     const bio = ref("");
     const group = ref("");
+
     const project = ref("");
     const avatar_url = ref("");
 
@@ -161,6 +180,7 @@ export default defineComponent({
       website,
       group,
       bio,
+
       project,
       avatar_url,
       updateProfile,
@@ -173,10 +193,10 @@ export default defineComponent({
 
 <style scoped>
 
-textarea {
-    height: 300px;
-    min-height: 200px;
-    max-height: 500px;
-}
+  textarea {
+      height: 300px;
+      min-height: 200px;
+      max-height: 500px;
+  }
 
 </style>

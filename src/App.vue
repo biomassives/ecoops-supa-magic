@@ -1,7 +1,8 @@
 <template>
-  <div className="container" style="padding: 50px 0 100px 0">
+  <div className="container" style="padding: 50px 0 50px 0">
     <template v-if="session"
-      ><account :key="session.user.id" :session="session"
+      >
+      <account :key="session.user.id" :session="session"
     /></template>
     <template v-else><auth /></template>
   </div>
@@ -11,6 +12,11 @@
 import { defineComponent, onMounted, ref } from "vue";
 import Auth from "./Auth.vue";
 import Account from "./Account.vue";
+//import Tabs from "./components/Tabs.vue";
+//import Tab from "./components/Tab.vue";
+
+
+
 import { supabase } from "./supabaseClient";
 
 export default defineComponent({
@@ -18,6 +24,9 @@ export default defineComponent({
   components: {
     Auth,
     Account
+  },
+  data: () => {
+    return { dynamicTabs: [1, 2, 3] };
   },
   setup() {
     const session = ref();
@@ -50,10 +59,10 @@ html,
 body {
   --custom-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  --custom-bg-color: #101010;
+  --custom-bg-color: #fff;
   --custom-panel-color: #222;
   --custom-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.8);
-  --custom-color: #fff;
+  --custom-color: #101010;
   --custom-color-brand: #24b47e;
   --custom-color-secondary: #666;
   --custom-border: 1px solid #333;
@@ -82,6 +91,13 @@ body,
 
 /* Grid */
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
 .container {
   width: 90%;
   margin-left: auto;
@@ -101,13 +117,7 @@ body,
 .col-3,
 .col-4,
 .col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12 {
+.col-6{
   width: 96%;
 }
 .col-1-sm {
@@ -126,24 +136,6 @@ body,
   width: 37.66%;
 }
 .col-6-sm {
-  width: 46%;
-}
-.col-7-sm {
-  width: 54.33%;
-}
-.col-8-sm {
-  width: 62.66%;
-}
-.col-9-sm {
-  width: 71%;
-}
-.col-10-sm {
-  width: 79.33%;
-}
-.col-11-sm {
-  width: 87.66%;
-}
-.col-12-sm {
   width: 96%;
 }
 .row::after {
@@ -180,29 +172,9 @@ body,
     width: 37.66%;
   }
   .col-6 {
-    width: 46%;
-  }
-  .col-7 {
-    width: 54.33%;
-  }
-  .col-8 {
-    width: 62.66%;
-  }
-  .col-9 {
-    width: 71%;
-  }
-  .col-10 {
-    width: 79.33%;
-  }
-  .col-11 {
-    width: 87.66%;
-  }
-  .col-12 {
     width: 96%;
   }
-  .hidden-sm {
-    display: block;
-  }
+
 }
 
 @media only screen and (min-width: 60em) {

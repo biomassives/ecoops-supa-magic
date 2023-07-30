@@ -2,7 +2,11 @@
 <template>
   <div class="row flex flex-center">
     <div class="col-6 form-widget">
-      <h1 class="header">Supabase + Vue.js</h1>
+      <h1 class="header">Eco Ops App</h1>
+
+      <p>
+        <img src="/eco_ops_giraffe_graphic2023-07-12-.avif">  
+      </p>
       <p class="description">Sign in via magic link with your email below</p>
       <div>
         <input

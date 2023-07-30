@@ -2,7 +2,9 @@
 <template>
   <div class="row flex flex-center">
     <div class="col-6 form-widget">
-      <h1 class="header">Eco Ops App</h1>
+      <center>
+      <h3 class="header">Eco Ops App</h3>
+      </center>
 
       <p>
       <img src="https://raw.githubusercontent.com/biomassives/ecoops-supa-magic/main/src/assets/eco_ops_giraffe_graphic2023-07-12-.avif" class="hero">      

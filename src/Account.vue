@@ -27,6 +27,10 @@
       <label htmlFor="project">Project</label>
       <input id="project" type="project" v-model="project" />
     </div>
+    <div>
+      <label htmlFor="project">Bio</label>
+      <textarea id="bio" type="bio" v-model="project" /></textarea>
+    </div>
 
     <div>
       <button
@@ -71,6 +75,7 @@ export default defineComponent({
     const loading = ref(false);
     const username = ref("");
     const website = ref("");
+    const bio = ref("");
     const group = ref("");
     const project = ref("");
     const avatar_url = ref("");
@@ -97,6 +102,7 @@ export default defineComponent({
           id: user?.id,
           username : username.value,
           website: website.value,         
+          bio: bio.value,         
           group: group.value,
           project: project.value,
           avatar_url: (avatar_url.value || avatar_url),
@@ -122,7 +128,7 @@ export default defineComponent({
 
         let { data, error, status } = await supabase
           .from("profiles")
-          .select(`username, website, project, group, avatar_url`)
+          .select(`username, website, bio, project, group, avatar_url`)
           .eq("id", user.id)
           .single();
 
@@ -133,6 +139,7 @@ export default defineComponent({
         if (data) {
           username.value = data.username;
           website.value = data.website;
+          bio.value = data.bio;
           group.value = data.group;
           project.value = data.project;
           avatar_url.value = data.avatar_url;
@@ -153,6 +160,7 @@ export default defineComponent({
       username,
       website,
       group,
+      bio,
       project,
       avatar_url,
       updateProfile,
@@ -164,4 +172,11 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
+textarea {
+    height: 300px;
+    min-height: 200px;
+    max-height: 500px;
+}
+
 </style>

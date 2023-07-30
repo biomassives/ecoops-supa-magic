@@ -5,8 +5,9 @@
       <h1 class="header">Eco Ops App</h1>
 
       <p>
-        <img src="/eco_ops_giraffe_graphic2023-07-12-.avif">  
+      <img src="https://raw.githubusercontent.com/biomassives/ecoops-supa-magic/main/src/assets/eco_ops_giraffe_graphic2023-07-12-.avif" class="hero">      
       </p>
+      
       <p class="description">Sign in via magic link with your email below</p>
       <div>
         <input

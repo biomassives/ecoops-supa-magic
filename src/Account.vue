@@ -29,7 +29,7 @@
     </div>
     <div>
       <label htmlFor="project">Bio</label>
-      <textarea id="bio" type="bio" v-model="project" /></textarea>
+      <textarea id="bio" type="bio" v-model="project" />
     </div>
 
     <div>

@@ -1,11 +1,10 @@
 
 <template>
   <div class="form-widget">
-    <h1 class="header">Eco Ops App</h1>
-    <p>
-    <img src="/ecoops2023biodiversity-credit-launch.webp">
 
-    </p>
+    
+    <h1 class="header">Eco Ops App</h1>
+
 
     <avatar :url="avatar_url" @onUpload="handleImageUpload" />
     <div>
@@ -44,6 +43,16 @@
         Sign Out
       </button>
     </div>
+
+  <div> <b>How it works:</b> 
+     ‘eco ops app’ generates reports supporting group transparency showing what activities are planned, 
+     milestones achieved, and credits participants by awarding climate friendly NFT tokens to participants, 
+     which are used to substantiate the sale of credits to the general public and corporate sponsors. 
+     SCD Hub is a US non profit founded in 2017 dedicated to researching and educating about the efficacy 
+     of local actions that can be taken to address global climate and biodiversity issues in a locally appropriate context
+  </div>
+
+    
   </div>
 </template>
 

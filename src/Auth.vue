@@ -3,27 +3,14 @@
   <div class="row flex flex-center">
     <div class="col-6 form-widget">
       <center>
-      <h3 class="header">Eco Ops App</h3>
-      </center>
+      <h3 class="header">Eco Ops App Profile Manger</h3>
 
-      <p>
-      <img src="https://raw.githubusercontent.com/biomassives/ecoops-supa-magic/main/src/assets/eco_ops_giraffe_graphic2023-07-12-.avif" class="hero">      
-      </p>
-      
-      <p class="description">Sign in via magic link with your email below</p>
-      </div>
-
-  <div class="headerarea">
-
-    <div class="headarea">
-      <p class="description">
-        <br/><br/><br/>
-      <h1 class="header">Eco Ops App</h1>
       Sign in to update your profile via <BR/> magic link with your email below
       <BR />
 
       <img src="https://raw.githubusercontent.com/biomassives/ecoops-supa-magic/main/src/assets/eco_ops_giraffe_graphic2023-07-12-.avif" class="hero">
-      </p>  
+
+      </center>
     </div>
    
 

@@ -11,7 +11,7 @@
       </p>
       
       <p class="description">Sign in via magic link with your email below</p>
-      <div>
+      </div>
 
   <div class="headerarea">
 

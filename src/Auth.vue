@@ -1,7 +1,7 @@
 
 <template>
   <div class="row flex flex-center">
-    <div class="col-6 form-widget">
+    <div class="col-6 form-widget mediacol">
       <center>
       <h3 class="header">Eco Ops App Profile Manger</h3>
 
@@ -17,7 +17,7 @@
     <div class="row flex flex-center">
 
 
-    <div class="col form-widget"  style="margin-top: 5rem">
+    <div class="col form-widget mediacol"  style="margin-top: 5rem">
       <div row>
 
       <b-card>
@@ -134,7 +134,7 @@ export default defineComponent({
 
 <style scoped>
 
-template {
+.mediacol {
   -webkit-columns: 2 200px;
   -moz-columns: 2 200px;
   columns: 2 200px;
@@ -142,7 +142,7 @@ template {
 }
 
 @media (min-width: 500px) {
-  template {
+  .mediacol {
     height: 450px;
   }
 }

@@ -1,7 +1,6 @@
 
 <template>
-  <div class="row flex flex-center">
-    <div class="col-6 form-widget mediacol">
+    <div class="col-6 form-widget mediacol flex flex-center">
       <center>
       <h3 class="header">Eco Ops App Profile Manger</h3>
 
@@ -14,7 +13,6 @@
     </div>
    
 
-    <div class="row flex flex-center">
 
 
     <div class="col form-widget mediacol"  style="margin-top: 5rem">
@@ -95,8 +93,7 @@
       </div>
 </div>
 
-      
-</div>
+       
 </div>
 </template>
 

@@ -193,13 +193,9 @@ export default defineComponent({
 
 <style scoped>
 
-template {
-  -webkit-columns: 2 200px;
-  -moz-columns: 2 200px;
-  columns: 2 200px;
 
-}
 
+        
   textarea {
       height: 300px;
       min-height: 200px;

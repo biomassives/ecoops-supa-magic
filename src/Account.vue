@@ -12,7 +12,7 @@
     <div>
 
   <h1 class="header">Eco Ops Profile</h1>
-  <div>  <avatar :url="avatar_url" @onUpload="handleImageUpload" />  </div>
+  <avatar :url="avatar_url" @onUpload="handleImageUpload" />  
   <p></p>
   <div>
 

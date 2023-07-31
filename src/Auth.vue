@@ -133,4 +133,22 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
+template {
+  -webkit-columns: 2 200px;
+  -moz-columns: 2 200px;
+  columns: 2 200px;
+
+}
+
+@media (min-width: 500px) {
+  template {
+    height: 450px;
+  }
+}
+
+
+
+
+  
 </style>

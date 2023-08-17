@@ -2,10 +2,20 @@
 
 
   <div class="form-widget">
+
+
+    
+    <h1 class="header">Eco Ops App</h1>
+
+
+    <avatar :url="avatar_url" @onUpload="handleImageUpload" />
+   
+
   <h1 class="header">Eco Ops Profile</h1>
-  <div>  <avatar :url="avatar_url" @onUpload="handleImageUpload" />  </div>
+  <avatar :url="avatar_url" @onUpload="handleImageUpload" />  
   <p></p>
   <div>
+
       <label htmlFor="email">Email</label>
       <input id="email" type="text" :value="session.user.email" disabled />
     </div>
@@ -25,6 +35,10 @@
       <label htmlFor="project">Project</label>
       <input id="project" type="project" v-model="project" />
     </div>
+    <div>
+      <label htmlFor="project">Bio</label>
+      <textarea id="bio" type="bio" v-model="project" />
+    </div>
 
     <div>
       <button
@@ -41,6 +55,16 @@
         Sign Out
       </button>
     </div>
+
+  <div> <b>How it works:</b> 
+     ‘eco ops app’ generates reports supporting group transparency showing what activities are planned, 
+     milestones achieved, and credits participants by awarding climate friendly NFT tokens to participants, 
+     which are used to substantiate the sale of credits to the general public and corporate sponsors. 
+     SCD Hub is a US non profit founded in 2017 dedicated to researching and educating about the efficacy 
+     of local actions that can be taken to address global climate and biodiversity issues in a locally appropriate context
+  </div>
+
+    
   </div>
 </template>
 
@@ -69,7 +93,9 @@ export default defineComponent({
     const loading = ref(false);
     const username = ref("");
     const website = ref("");
-    const ecogroup = ref("");
+    const bio = ref("");
+    const group = ref("");
+
     const project = ref("");
     const avatar_url = ref("");
 
@@ -95,7 +121,8 @@ export default defineComponent({
           id: user?.id,
           username : username.value,
           website: website.value,         
-          ecogroup: ecogroup.value,
+          bio: bio.value,         
+          group: group.value,
           project: project.value,
           avatar_url: (avatar_url.value || avatar_url),
           updated_at: new Date()
@@ -120,7 +147,7 @@ export default defineComponent({
 
         let { data, error, status } = await supabase
           .from("profiles")
-          .select(`username, website, project, ecogroup, avatar_url`)
+          .select(`username, website, bio, project, group, avatar_url`)
           .eq("id", user.id)
           .single();
 
@@ -131,7 +158,8 @@ export default defineComponent({
         if (data) {
           username.value = data.username;
           website.value = data.website;
-          ecogroup.value = data.ecogroup;
+          bio.value = data.bio;
+          group.value = data.group;
           project.value = data.project;
           avatar_url.value = data.avatar_url;
         }
@@ -150,7 +178,9 @@ export default defineComponent({
       loading,
       username,
       website,
-      ecogroup,
+      group,
+      bio,
+
       project,
       avatar_url,
       updateProfile,
@@ -161,6 +191,15 @@ export default defineComponent({
 });
 </script>
 
+<style scoped>
 
 
 
+        
+  textarea {
+      height: 300px;
+      min-height: 200px;
+      max-height: 500px;
+  }
+
+</style>

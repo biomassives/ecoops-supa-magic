@@ -1,23 +1,21 @@
 
 <template>
-  <div class="headerarea">
+    <div class="col-6 form-widget mediacol flex flex-center">
+      <center>
+      <h3 class="header">Eco Ops App Profile Manger</h3>
 
-    <div class="headarea">
-      <p class="description">
-        <br/><br/><br/>
-      <h1 class="header">Eco Ops App</h1>
       Sign in to update your profile via <BR/> magic link with your email below
       <BR />
 
       <img src="https://raw.githubusercontent.com/biomassives/ecoops-supa-magic/main/src/assets/eco_ops_giraffe_graphic2023-07-12-.avif" class="hero">
-      </p>  
+
+      </center>
     </div>
    
 
-    <div class="row flex flex-center">
 
 
-    <div class="col form-widget"  style="margin-top: 5rem">
+    <div class="col form-widget mediacol"  style="margin-top: 5rem">
       <div row>
 
       <b-card>
@@ -95,9 +93,7 @@
       </div>
 </div>
 
-      
-</div>
-</div>
+        
 </template>
 
 <script lang="ts">
@@ -133,4 +129,22 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
+.mediacol {
+  -webkit-columns: 2 200px;
+  -moz-columns: 2 200px;
+  columns: 2 200px;
+
+}
+
+@media (min-width: 500px) {
+  .mediacol {
+    height: 450px;
+  }
+}
+
+
+
+
+  
 </style>
